@@ -1,0 +1,9 @@
+/*
+  App.css – SleepSync
+  Override & tambahan per-komponen.
+  Base styles ada di index.css.
+*/
+
+/* Navbar active link dari react-router */
+.nav-link.active { color: var(--mint-500); font-weight: 600; }
+.nav-link.active::after { width: 100%; }
