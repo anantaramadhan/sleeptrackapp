@@ -43,6 +43,9 @@ app.use("/api",          predictRoutes);
 app.get("/", (req, res) => {
   res.send("Backend SleepSync berjalan");
 });
+app.get("/health", (req, res) => {
+  res.status(200).json({ status: "ok", timestamp: new Date().toISOString() });
+});
 
 // Global error handler
 app.use((err, req, res, next) => {
