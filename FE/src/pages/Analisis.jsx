@@ -935,43 +935,41 @@ export default function Analisis() {
     </div>
   </div>
 
-  <div className="result-score-wrap">
-    <svg className="score-ring" viewBox="0 0 90 90">
-      <circle
-        cx="45"
-        cy="45"
-        r="38"
-        fill="none"
-        stroke="#e5e7eb"
-        strokeWidth="8"
-      />
+ <div className="result-score-wrap">
+  <svg className="score-ring" viewBox="0 0 80 80">
+    <circle
+      cx="40"
+      cy="40"
+      r="34"
+      fill="none"
+      stroke="#e5e7eb"
+      strokeWidth="8"
+    />
+    <circle
+      cx="40"
+      cy="40"
+      r="34"
+      fill="none"
+      stroke={scoreColor(result.score)}
+      strokeWidth="8"
+      strokeLinecap="round"
+      strokeDasharray={`${(result.score / 10) * 213.6} 213.6`}
+      transform="rotate(-90 40 40)"
+    />
+  </svg>
 
-      <circle
-        cx="45"
-        cy="45"
-        r="38"
-        fill="none"
-        stroke={scoreColor(result.score)}
-        strokeWidth="8"
-        strokeLinecap="round"
-        strokeDasharray={`${(result.score / 10) * 238.76} 238.76`}
-        transform="rotate(-90 45 45)"
-      />
-    </svg>
-
-    <div className="score-text">
+  <div className="score-text">
+    <div className="score-value">
       <span
         className="score-num"
         style={{ color: scoreColor(result.score) }}
       >
         {result.score}
       </span>
-
-      <span className="score-den">
-        /10
-      </span>
+      <span className="score-den">/10</span>
     </div>
   </div>
+</div>
 </div>
 
 <div className="result-body">
