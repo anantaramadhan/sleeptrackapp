@@ -1,4 +1,3 @@
-
 /* ==================================================
    PREDICT SECTION
 ================================================== */
@@ -25,6 +24,7 @@
   font-weight: 700;
   letter-spacing: 0.05em;
 }
+
 
 /* ==================================================
    FORM CARD
@@ -63,6 +63,7 @@
 .form-group-full {
   grid-column: 1 / -1;
 }
+
 
 /* ==================================================
    FORM ELEMENTS
@@ -116,6 +117,7 @@
   box-shadow: 0 0 0 3px rgba(110, 231, 183, 0.2);
 }
 
+
 /* ==================================================
    RANGE SLIDER
 ================================================== */
@@ -162,6 +164,7 @@
   font-size: 0.72rem;
 }
 
+
 /* ==================================================
    ERROR MESSAGE
 ================================================== */
@@ -177,6 +180,7 @@
   color: #dc2626;
   font-size: 0.85rem;
 }
+
 
 /* ==================================================
    PREDICT BUTTON
@@ -229,6 +233,7 @@
   background: linear-gradient(135deg, #a7f3d0, #93c5fd);
 }
 
+
 /* ==================================================
    LOADING SPINNER
 ================================================== */
@@ -252,17 +257,18 @@
   }
 }
 
+
 /* ==================================================
    RESULT CARD
 ================================================== */
 
 .predict-result-card {
   margin-top: 1.5rem;
-  padding: 2rem;
+  padding: 1.75rem 2rem;
 
   background: linear-gradient(135deg, #f0fdf4, #eff6ff);
   border: 1.5px solid #bbf7d0;
-  border-radius: 24px;
+  border-radius: 20px;
 
   animation: fadeSlideUp 0.4s ease both;
 }
@@ -279,32 +285,22 @@
   }
 }
 
+
 /* ==================================================
    RESULT HEADER
 ================================================== */
 
 .result-top {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 
   margin-bottom: 1.5rem;
 }
 
-.result-main-info {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-
-  flex: 1;
-  min-width: 0;
-}
-
 .result-emoji {
-  flex-shrink: 0;
-
-  font-size: 3.5rem;
+  font-size: 2.8rem;
   line-height: 1;
 }
 
@@ -313,18 +309,19 @@
 }
 
 .result-label {
-  margin-bottom: 0.3rem;
+  margin-bottom: 4px;
 
   color: #1f2937;
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: 800;
 }
 
 .result-ringkasan {
   color: #6b7280;
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
+
 
 /* ==================================================
    SCORE RING
@@ -332,11 +329,6 @@
 
 .result-score-wrap {
   position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
   flex-shrink: 0;
 
   width: 90px;
@@ -353,9 +345,9 @@
   inset: 0;
 
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
+  gap: 2px;
 }
 
 .score-num {
@@ -365,11 +357,12 @@
 }
 
 .score-den {
-  margin-top: 2px;
+  margin: 0;
 
   color: #9ca3af;
   font-size: 0.8rem;
   font-weight: 600;
+  line-height: 1;
 }
 
 /* ==================================================
@@ -379,43 +372,24 @@
 .result-body {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1rem;
 }
 
 .result-risiko,
-.ai-rec-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-
-  padding: 1.25rem;
+.result-ai-rec {
+  padding: 1rem 1.25rem;
 
   background: #fff;
   border: 1px solid #e5e7eb;
-  border-radius: 16px;
-
-  transition: transform 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-.result-risiko:hover,
-.ai-rec-card:hover {
-  transform: translateY(-2px);
-
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
-}
-
-.risk-content,
-.ai-rec-content {
-  flex: 1;
+  border-radius: 14px;
 }
 
 .result-risiko h4,
-.ai-rec-content h3 {
-  margin: 0 0 1rem;
+.result-ai-rec h3 {
+  margin: 0 0 10px;
 
   color: #374151;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 700;
 }
 
@@ -423,105 +397,28 @@
   margin: 0;
 
   color: #4b5563;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.85rem;
+  line-height: 1.55;
 }
+
 
 /* ==================================================
    AI RECOMMENDATION
 ================================================== */
 
-.ai-rec-icon {
-  flex-shrink: 0;
-
-  font-size: 2rem;
-}
-
 .ai-rec-list {
   margin: 0;
-  padding-left: 1.5rem;
+  padding-left: 20px;
 }
 
 .ai-rec-list li {
-  margin-bottom: 0.9rem;
+  margin-bottom: 10px;
 
   color: #4b5563;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 0.85rem;
+  line-height: 1.5;
 }
 
 .ai-rec-list li:last-child {
   margin-bottom: 0;
 }
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
-
-@media (max-width: 768px) {
-
-  .predict-form-card,
-  .predict-result-card {
-    padding: 1.5rem;
-  }
-
-  .result-top {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .result-main-info {
-    width: 100%;
-  }
-
-  .result-score-wrap {
-    align-self: center;
-  }
-
-  .result-label {
-    font-size: 1.7rem;
-  }
-
-  .result-ringkasan {
-    font-size: 0.95rem;
-  }
-
-  .result-emoji {
-    font-size: 3rem;
-  }
-
-  .result-risiko,
-  .ai-rec-card {
-    padding: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .predict-form-grid {
-    gap: 1rem;
-  }
-
-  .result-label {
-    font-size: 1.5rem;
-  }
-
-  .result-score-wrap {
-    width: 80px;
-    height: 80px;
-  }
-
-  .score-ring {
-    width: 80px;
-    height: 80px;
-  }
-
-  .score-num {
-    font-size: 1.7rem;
-  }
-
-  .score-den {
-    font-size: 0.75rem;
-  }
-}
-```
