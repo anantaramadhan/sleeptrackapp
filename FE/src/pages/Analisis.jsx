@@ -958,10 +958,24 @@ export default function Analisis() {
               </div>
             </div>
 
-           <div className="result-body">
+<div className="result-body">
   <div className="result-risiko">
     <h4>⚠️ Risiko</h4>
     <p>{result.risiko}</p>
+  </div>
+
+  {/* AI Recommendation */}
+  <div className="ai-rec-card result-ai-rec">
+    <div className="ai-rec-icon">🤖</div>
+    <div className="ai-rec-content">
+      <h3>Rekomendasi Personalisasi AI</h3>
+
+      <ul className="ai-rec-list">
+        {result.rekomendasi.map((r, i) => (
+          <li key={i}>{r}</li>
+        ))}
+      </ul>
+    </div>
   </div>
 </div>
           </div>
@@ -1003,27 +1017,6 @@ export default function Analisis() {
               <div className="factor-impact">{f.impact}% dampak</div>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* AI Recommendation */}
-      <div className="ai-rec-card">
-        <div className="ai-rec-icon">🤖</div>
-        <div className="ai-rec-content">
-          <h3>Rekomendasi Personalisasi AI</h3>
-          {result ? (
-            <ul className="ai-rec-list">
-              {result.rekomendasi.map((r, i) => (
-                <li key={i}>{r}</li>
-              ))}
-            </ul>
-          ) : (
-            <p className="ai-rec-empty">
-              Rekomendasi akan muncul setelah Anda melakukan prediksi di atas.
-              Isi data kesehatan Anda dan klik{" "}
-              <strong>🔮 Prediksi Kualitas Tidur</strong>.
-            </p>
-          )}
         </div>
       </div>
     </div>
