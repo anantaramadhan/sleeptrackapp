@@ -8,6 +8,14 @@
   margin-bottom: 1.5rem;
 }
 
+.result-body {
+  display: flex;
+}
+
+.result-risiko {
+  flex: 1;
+}
+
 .predict-badge {
   display: inline-flex;
   align-items: center;

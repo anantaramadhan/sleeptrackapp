@@ -958,21 +958,12 @@ export default function Analisis() {
               </div>
             </div>
 
-            <div className="result-body">
-              <div className="result-rekom">
-                <h4>💡 Rekomendasi</h4>
-                <ul>
-                  {result.rekomendasi.map((r, i) => (
-                    <li key={i}>{r}</li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="result-risiko">
-                <h4>⚠️ Risiko</h4>
-                <p>{result.risiko}</p>
-              </div>
-            </div>
+           <div className="result-body">
+  <div className="result-risiko">
+    <h4>⚠️ Risiko</h4>
+    <p>{result.risiko}</p>
+  </div>
+</div>
           </div>
         )}
       </div>
