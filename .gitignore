@@ -1,0 +1,19 @@
+# --- Node.js ---
+**/node_modules
+**/package-lock.json
+**/npm-debug.log
+
+# --- Lingkungan ---
+.env
+.env.local
+.env.*.local
+
+# --- Build & Logs ---
+dist
+build
+.vercel
+*.log
+
+# --- Sistem ---
+.DS_Store
+Thumbs.db
