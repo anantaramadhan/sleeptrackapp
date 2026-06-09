@@ -1,17 +1,19 @@
+import React from 'react';
 import { Routes, Route } from "react-router-dom";
-
-import LandingPage from "./pages/LandingPage";
-import Login from "./pages/Login";
-import Register from "./pages/Register";
-import ForgotPassword from "./pages/ForgotPassword";
-
-import Dashboard from "./pages/Dashboard";
-import Analisis from "./pages/Analisis";
-import Pengaturan from "./pages/Pengaturan";
-import DashboardLayout from "./pages/DashboardLayout";
-import ProtectedRoute from "./components/ProtectedRoute";
-
 import "./index.css";
+
+import LandingPage from './pages/LandingPage';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import ForgotPassword from './pages/ForgotPassword';
+import DashboardLayout from './pages/DashboardLayout';
+import Dashboard from './pages/Dashboard';
+import Analisis from './pages/Analisis';
+import Pengaturan from './pages/Pengaturan';
+import ProtectedRoute from './components/ProtectedRoute';
+
+
+
 
 function App() {
   return (
