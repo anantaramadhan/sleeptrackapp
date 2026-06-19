@@ -19,9 +19,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero__desc">
-            SleepSync menganalisis pola tidur Anda secara real-time dengan
-            teknologi AI, memberikan insight personal dan rekomendasi untuk
-            kualitas hidup yang lebih baik setiap hari.
+           SleepSync membantu menganalisis pola tidur Anda menggunakan teknologi AI, memberikan insight personal dan rekomendasi yang tepat untuk meningkatkan kualitas hidup setiap hari.
           </p>
 
           <div className="hero__actions">
